@@ -1,2 +1,2 @@
 # construction_sports
-construction sports 30 percent
+the backend part of the project created by the Ministry of Youth Policy and Sports to determine 30% of construction objects by voting
