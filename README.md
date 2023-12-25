@@ -28,7 +28,7 @@ The frontend is written in JavaScript using the React framework. The frontend is
 
 
 # Telegram bot
-The telegram bot is written in Python using the aiogram library. The telegram bot is responsible for the following tasks:
+The telegram bot is written in Python using the python-telegram-bot library. The telegram bot is responsible for the following tasks:
     - Retrieving data from the backend
     - Sending data to the backend
     - Sending data to the user
