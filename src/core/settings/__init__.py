@@ -1,6 +1,6 @@
 from decouple import config
 
-ENV_NAME = config('ENV_NAME', default='prod', cast=str)
+ENV_NAME = config('ENV_NAME', default='production', cast=str)
 
 if ENV_NAME == 'dev':
     from .dev import *

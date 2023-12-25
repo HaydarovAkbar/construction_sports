@@ -29,8 +29,8 @@ LOCAL_APPS = [
 ]
 
 DEV_APPS = [
-    'app'
-    'account'
+    'app',
+    'account',
     'utils',
     'bot.apps.BotConfig',
 ]
@@ -65,8 +65,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
-#### to environment variables
-AUTH_USER_MODEL = "account.User"
+# #### to environment variables
+# AUTH_USER_MODEL = "account.User"
 
 TEMPLATES = [
     {
