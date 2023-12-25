@@ -3,6 +3,8 @@ from decouple import config as env
 
 DEBUG = False
 
+ALLOWED_HOSTS = ['cons.sport.uz', '192.168.10.6']
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
