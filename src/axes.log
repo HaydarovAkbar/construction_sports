@@ -1,2 +1,69 @@
 AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
 AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:31:31.387443+00:00
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:31:31.387443+00:00
+AXES: Successful login by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}.
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:37:46.660190+00:00
+AXES: Successful logout by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/logout/"}.
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:53.452000+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:53.452000+00:00
+AXES: User login failed, running database handler for failure.
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:37:53.452000+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: New login failure by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}. Created new record in the database.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:53.452000+00:00
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:56.522473+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:56.522473+00:00
+AXES: User login failed, running database handler for failure.
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:37:56.522473+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Repeated login failure by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}. Updated existing record in the database.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:56.522473+00:00
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:58.415338+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:58.415338+00:00
+AXES: User login failed, running database handler for failure.
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:37:58.415338+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Repeated login failure by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}. Updated existing record in the database.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:37:58.415338+00:00
+AXES: Locking out {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"} after repeated login failures.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:38:06.706369+00:00
+AXES: User login failed, running database handler for failure.
+AXES: Cleaned up 0 expired access attempts from database that were older than 2023-12-26 05:38:06.706369+00:00
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Repeated login failure by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}. Updated existing record in the database.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:38:06.706369+00:00
+AXES: Locking out {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"} after repeated login failures.
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2023-12-26 05:43:08.906344+00:00
+AXES: Cleaned up 1 expired access attempts from database that were older than 2023-12-26 05:43:08.906344+00:00
+AXES: Successful login by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}.
