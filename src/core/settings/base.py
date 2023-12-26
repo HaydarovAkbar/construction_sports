@@ -21,7 +21,7 @@ ALLOWED_HOSTS = ['*']
 
 LOCAL_APPS = [
     'modeltranslation',
-    'jazzmin',
+    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -201,7 +201,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-HOST = 'https://2e0e-194-93-24-3.ngrok-free.app'
+HOST = 'https://bbcd-194-93-24-3.ngrok-free.app'
 
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
