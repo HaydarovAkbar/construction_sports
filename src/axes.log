@@ -67,3 +67,19 @@ Using parameter credentials to get username with key settings.AXES_USERNAME_FORM
 AXES: Getting access attempts that are newer than 2023-12-26 05:43:08.906344+00:00
 AXES: Cleaned up 1 expired access attempts from database that were older than 2023-12-26 05:43:08.906344+00:00
 AXES: Successful login by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", path_info: "/admin/login/"}.
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
