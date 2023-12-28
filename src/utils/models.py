@@ -25,6 +25,29 @@ class State(models.Model):
         return self
 
 
+class Language(models.Model):
+    name = models.CharField(max_length=255)
+    attr = models.CharField(max_length=255, null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
+
+    objects = models.Manager()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Languages'
+        verbose_name = 'Language'
+        db_table = 'languages'
+
+    def save(self, *args, **kwargs):
+        self.updated_at = timezone.now()
+        super(Language, self).save(*args, **kwargs)
+        return self
+
+
 class Region(models.Model):
     title = models.CharField(max_length=255)
     attr = models.CharField(max_length=255, null=True, blank=True)
@@ -88,7 +111,8 @@ class Neighborhood(models.Model):  # Mahalla / Квартал
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
-    district = models.ForeignKey(District, on_delete=models.SET_NULL, related_name='neighborhoods', null=True, blank=True)
+    district = models.ForeignKey(District, on_delete=models.SET_NULL, related_name='neighborhoods', null=True,
+                                 blank=True)
 
     erp_id = models.PositiveIntegerField(null=True, blank=True)
     soato_code = models.PositiveIntegerField(null=True, blank=True)
