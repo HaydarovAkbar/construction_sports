@@ -90,15 +90,15 @@ class Construction(models.Model):
     basis = models.ForeignKey(Basis, on_delete=models.SET_NULL, null=True)
     where_is_built = models.ForeignKey(WhereIsBuilt, on_delete=models.SET_NULL, null=True)
 
-    length = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Высота')
-    witdh = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Ширина')
-    height = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Длина')
+    length = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Высота', null=True, blank=True)
+    witdh = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Ширина', null=True, blank=True)
+    height = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Длина', null=True, blank=True)
 
     is_active = models.BooleanField(default=True, verbose_name='Активный')
     is_deleted = models.BooleanField(default=False, verbose_name='Удаленный')
 
-    longitude = models.DecimalField(max_digits=14, decimal_places=10, verbose_name='Долгота')
-    latitude = models.DecimalField(max_digits=14, decimal_places=10, verbose_name='Широта')
+    longitude = models.DecimalField(max_digits=14, decimal_places=10, verbose_name='Долгота', null=True, blank=True)
+    latitude = models.DecimalField(max_digits=14, decimal_places=10, verbose_name='Широта', null=True, blank=True)
 
     region = models.ForeignKey(Region, on_delete=models.SET_NULL, null=True)
     district = models.ForeignKey(District, on_delete=models.SET_NULL, null=True)
@@ -109,6 +109,8 @@ class Construction(models.Model):
 
     started_date = models.DateField(null=True, blank=True, verbose_name='Дата начала')
     ended_date = models.DateField(null=True, blank=True, verbose_name='Дата окончания')
+
+    image = models.ImageField(upload_to='construction/', null=True, blank=True, verbose_name='Изображение')
 
     class Meta:
         verbose_name_plural = 'Строительства'
