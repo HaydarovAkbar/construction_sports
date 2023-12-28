@@ -1,5 +1,5 @@
 from modeltranslation.translator import translator, TranslationOptions, register
-from ..models import State
+from ..models import State, Region, District, Neighborhood
 
 
 @register(State)
@@ -7,26 +7,16 @@ class StateTranslationOptions(TranslationOptions):
     fields = ('name',)
 
 
-# @register(Category)
-# class CategoryTranslationOptions(TranslationOptions):
-#     fields = ('shortname', 'fullname')
-#
-#
-# @register(Specialization)
-# class SpecializationTranslationOptions(TranslationOptions):
-#     fields = ('shortname', 'fullname')
-#
-#
-# @register(Region)
-# class RegionTranslationOptions(TranslationOptions):
-#     fields = ('shortname', 'fullname')
-#
-#
-# @register(District)
-# class DistrictTranslationOptions(TranslationOptions):
-#     fields = ('shortname', 'fullname')
-#
-#
-# @register(Instruction)
-# class InstructionTranslationOptions(TranslationOptions):
-#     fields = ('file_name', 'content')
+@register(Region)
+class CategoryTranslationOptions(TranslationOptions):
+    fields = ('title',)
+
+
+@register(District)
+class SpecializationTranslationOptions(TranslationOptions):
+    fields = ('title',)
+
+
+@register(Neighborhood)
+class RegionTranslationOptions(TranslationOptions):
+    fields = ('title',)
