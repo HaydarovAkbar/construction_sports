@@ -2,9 +2,9 @@ from django.db import models
 from utils.models import State, Region, District, Neighborhood
 
 
-class ConstructionType(models):
+class ConstructionType(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут')
+    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -20,7 +20,7 @@ class ConstructionType(models):
 
 class Season(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут')
+    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -53,7 +53,7 @@ class SeasonPrice(models.Model):
 
 class Basis(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут')
+    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
