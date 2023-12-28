@@ -5,6 +5,7 @@ from django.utils import timezone
 class State(models.Model):
     name = models.CharField(max_length=255)
     attr = models.CharField(max_length=255, null=True, blank=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
@@ -32,6 +33,7 @@ class Region(models.Model):
     updated_at = models.DateTimeField(auto_now=True, null=True)
 
     state = models.ForeignKey(State, on_delete=models.CASCADE, related_name='regions', null=True, blank=True)
+
     erp_id = models.PositiveIntegerField(null=True, blank=True)
     soato_code = models.PositiveIntegerField(null=True, blank=True)
 
@@ -76,4 +78,32 @@ class District(models.Model):
     def save(self, *args, **kwargs):
         self.updated_at = timezone.now()
         super(District, self).save(*args, **kwargs)
+        return self
+
+
+class Neighborhood(models.Model):  # Mahalla / Квартал
+    title = models.CharField(max_length=255)
+    attr = models.CharField(max_length=255, null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
+
+    district = models.ForeignKey(District, on_delete=models.SET_NULL, related_name='neighborhoods', null=True, blank=True)
+
+    erp_id = models.PositiveIntegerField(null=True, blank=True)
+    soato_code = models.PositiveIntegerField(null=True, blank=True)
+
+    objects = models.Manager()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Neighborhoods'
+        verbose_name = 'Neighborhood'
+        db_table = 'neighborhoods'
+
+    def save(self, *args, **kwargs):
+        self.updated_at = timezone.now()
+        super(Neighborhood, self).save(*args, **kwargs)
         return self
