@@ -34,6 +34,7 @@ DEV_APPS = [
     'app',
     'account',
     'utils',
+    'vote',
     'bot.apps.BotConfig',
 ]
 PROD_APPS = [
