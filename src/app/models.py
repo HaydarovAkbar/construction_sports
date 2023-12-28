@@ -110,8 +110,6 @@ class Construction(models.Model):
     started_date = models.DateField(null=True, blank=True, verbose_name='Дата начала')
     ended_date = models.DateField(null=True, blank=True, verbose_name='Дата окончания')
 
-    image = models.ImageField(upload_to='construction/', null=True, blank=True, verbose_name='Изображение')
-
     class Meta:
         verbose_name_plural = 'Строительства'
         verbose_name = 'Строительство'
@@ -125,3 +123,19 @@ class Construction(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ConstructionImage(models.Model):
+    image = models.ImageField(upload_to='construction', verbose_name='Изображение')
+    construction = models.ForeignKey(Construction, on_delete=models.CASCADE)
+
+    state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Изображения строительств'
+        verbose_name = 'Изображение строительства'
+        db_table = 'construction_image'
+
+    def __str__(self):
+        return self.created_at
