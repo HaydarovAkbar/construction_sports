@@ -139,4 +139,4 @@ class ConstructionImage(models.Model):
         db_table = 'construction_image'
 
     def __str__(self):
-        return self.created_at
+        return str(self.created_at)
