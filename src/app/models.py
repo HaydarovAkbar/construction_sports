@@ -1,10 +1,11 @@
 from django.db import models
 from utils.models import State, Region, District, Neighborhood
+from django.utils.translation import gettext_lazy as _
 
 
 class ConstructionType(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
+    title = models.CharField(max_length=255, verbose_name=_('Название'))
+    attr = models.CharField(max_length=255, verbose_name=_('Атрибут'), null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -13,14 +14,14 @@ class ConstructionType(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Типы строительства'
-        verbose_name = 'Тип строительства'
+        verbose_name_plural = _('Типы строительства')
+        verbose_name = _('Тип строительства')
         db_table = 'construction_type'
 
 
 class Season(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
+    title = models.CharField(max_length=255, verbose_name=_('Название'))
+    attr = models.CharField(max_length=255, verbose_name=_('Атрибут'), null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -29,8 +30,8 @@ class Season(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Сезоны'
-        verbose_name = 'Сезон'
+        verbose_name_plural = _('Сезоны')
+        verbose_name = _('Сезон')
         db_table = 'season'
 
 
@@ -43,8 +44,8 @@ class SeasonPrice(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     class Meta:
-        verbose_name_plural = 'Цены сезонов'
-        verbose_name = 'Цена сезона'
+        verbose_name_plural = _('Цены сезонов')
+        verbose_name = _('Цена сезона')
         db_table = 'season_price'
 
     def __str__(self):
@@ -52,8 +53,8 @@ class SeasonPrice(models.Model):
 
 
 class Basis(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут', null=True, blank=True)
+    title = models.CharField(max_length=255, verbose_name=_('Название'))
+    attr = models.CharField(max_length=255, verbose_name=_('Атрибут'), null=True, blank=True)
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -62,14 +63,14 @@ class Basis(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Основания'
-        verbose_name = 'Основание'
+        verbose_name_plural = _('Основания')
+        verbose_name = _('Основание')
         db_table = 'basis'
 
 
 class WhereIsBuilt(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название')
-    attr = models.CharField(max_length=255, verbose_name='Атрибут')
+    title = models.CharField(max_length=255, verbose_name=_('Название'))
+    attr = models.CharField(max_length=255, verbose_name=_('Атрибут'))
 
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -78,13 +79,13 @@ class WhereIsBuilt(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = 'Где строится'
-        verbose_name = 'Где строится'
+        verbose_name_plural = _('Где строится')
+        verbose_name = _('Где строится')
         db_table = 'where_is_built'
 
 
 class Construction(models.Model):
-    title = models.CharField(max_length=255, verbose_name='Название')
+    title = models.CharField(max_length=255, verbose_name=_('Название'))
     construction_type = models.ForeignKey(ConstructionType, on_delete=models.SET_NULL, null=True)
     season = models.ForeignKey(Season, on_delete=models.SET_NULL, null=True)
     basis = models.ForeignKey(Basis, on_delete=models.SET_NULL, null=True)
@@ -111,8 +112,8 @@ class Construction(models.Model):
     ended_date = models.DateField(null=True, blank=True, verbose_name='Дата окончания')
 
     class Meta:
-        verbose_name_plural = 'Строительства'
-        verbose_name = 'Строительство'
+        verbose_name_plural = _('Строительства')
+        verbose_name = _('Строительство')
         db_table = 'construction'
         indexes = [
             models.Index(fields=['title']),
