@@ -15,5 +15,5 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
     # patterns=[path('api/', include('myapi.urls')), ],
-    url=settings.HOST,
+    # url=settings.HOST,
 )

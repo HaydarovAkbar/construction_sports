@@ -10,6 +10,8 @@ class ConstructionType(models.Model):
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
+    image = models.ImageField(upload_to='construction_type', verbose_name='Изображение', null=True, blank=True)
+
     def __str__(self):
         return self.title
 
@@ -140,3 +142,18 @@ class ConstructionImage(models.Model):
 
     def __str__(self):
         return str(self.created_at)
+
+
+class SeasonStat(models.Model):
+    season = models.ForeignKey(Season, on_delete=models.CASCADE)
+    construction_type = models.ForeignKey(ConstructionType, on_delete=models.SET_NULL, null=True)
+    count = models.IntegerField(verbose_name='Количество строительств')
+    price = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Цена сезона (миллион сумов)')
+
+    class Meta:
+        verbose_name_plural = 'Статистика сезонов'
+        verbose_name = 'Статистика сезона'
+        db_table = 'season_stat'
+
+    def __str__(self):
+        return str(self.price)
