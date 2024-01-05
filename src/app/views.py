@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, parsers
 from rest_framework import permissions
 from rest_framework import status
 from rest_framework.response import Response
@@ -22,10 +22,9 @@ class ConstructionTypeView(viewsets.ModelViewSet):
             return serializers.ConstructionTypeListSerializer
         return serializers.ConstructionTypeSerializer
 
-    @swagger_auto_schema(manual_parameters=params.construction_type_enter, responses={201: 'Created'},
-                         operation_id='Enter fields', operation_description='Enter fields')
-    def create(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+    def get_parsers(self):
+        if self.action == 'create':
+            return [parsers.FormParser]
 
 
 class SeasonView(viewsets.ModelViewSet):
