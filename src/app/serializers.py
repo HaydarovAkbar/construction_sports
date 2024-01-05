@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.conf import settings
 
 from .models import Season, SeasonPrice, ConstructionType, Basis, Construction, SeasonStat, WhereIsBuilt
 
@@ -31,6 +32,11 @@ class ConstructionTypeListSerializer(serializers.ModelSerializer):
     class Meta:
         model = ConstructionType
         fields = ('id', 'title', 'attr',)
+
+    def to_representation(self, instance):
+        response = super(ConstructionTypeListSerializer, self).to_representation(instance)
+        response['image'] = settings.HOST + instance.get_image_url()
+        return response
 
 
 class BasisSerializer(serializers.ModelSerializer):

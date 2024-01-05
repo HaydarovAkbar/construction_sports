@@ -15,6 +15,12 @@ class ConstructionType(models.Model):
     def __str__(self):
         return self.title
 
+    def get_image_url(self):
+        try:
+            return self.image.url
+        except:
+            return ''
+
     class Meta:
         verbose_name_plural = _('Типы строительства')
         verbose_name = _('Тип строительства')

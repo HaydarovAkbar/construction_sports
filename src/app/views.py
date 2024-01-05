@@ -16,15 +16,16 @@ class ConstructionTypeView(viewsets.ModelViewSet):
     queryset = models.ConstructionType.objects.all()
     serializer_class = serializers.ConstructionTypeSerializer
     pagination_class = TenPagination
+    parser_classes = [parsers.FormParser, parsers.MultiPartParser, parsers.FileUploadParser, ]
 
     def get_serializer_class(self):
         if self.action == 'list':
             return serializers.ConstructionTypeListSerializer
         return serializers.ConstructionTypeSerializer
 
-    def get_parsers(self):
-        if self.action == 'create':
-            return [parsers.FormParser]
+    # def get_parsers(self):
+    #     if self.action == 'create':
+    #         return [parsers.FormParser]
 
 
 class SeasonView(viewsets.ModelViewSet):

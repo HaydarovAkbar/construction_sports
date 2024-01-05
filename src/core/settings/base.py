@@ -197,14 +197,15 @@ MODELTRANSLATION_TRANSLATION_FILES = (
 
 STATIC_URL = 'static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-HOST = 'https://bbcd-194-93-24-3.ngrok-free.app'
+HOST = 'http://172.17.17.68:7000'
 
 SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
