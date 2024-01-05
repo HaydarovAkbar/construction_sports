@@ -2,9 +2,12 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework import status
 from rest_framework.response import Response
+from drf_yasg.utils import swagger_auto_schema
+from django.utils.translation import activate
 
 from . import models
 from . import serializers
+from . import params
 
 from utils.pagination.base import TenPagination, TwentyPagination, FiftyPagination
 
@@ -19,7 +22,10 @@ class ConstructionTypeView(viewsets.ModelViewSet):
             return serializers.ConstructionTypeListSerializer
         return serializers.ConstructionTypeSerializer
 
-
+    @swagger_auto_schema(manual_parameters=params.construction_type_enter, responses={201: 'Created'},
+                         operation_id='Enter fields', operation_description='Enter fields')
+    def create(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
 
 
 class SeasonView(viewsets.ModelViewSet):
