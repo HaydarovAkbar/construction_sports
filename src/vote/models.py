@@ -15,7 +15,7 @@ class Votes(models.Model):
                                      verbose_name=_('Строительство'))
 
     def __str__(self):
-        return self.title
+        return str(self.created_at)
 
     class Meta:
         verbose_name_plural = _('Голосования')
