@@ -8,6 +8,7 @@ from django.utils.translation import activate
 from . import models
 from . import serializers
 from . import params
+from .filter.filter import SeasonStatFilterBackend
 
 from utils.pagination.base import TenPagination, TwentyPagination, FiftyPagination
 
@@ -77,3 +78,10 @@ class SeasonStatView(viewsets.ModelViewSet):
     queryset = models.SeasonStat.objects.all()
     serializer_class = serializers.SeasonStatSerializer
     pagination_class = TenPagination
+    filter_backends = [SeasonStatFilterBackend, ]
+    filterset_fields = ['season', 'construction_type', ]
+
+    # @swagger_auto_schema(manual_parameters=params.season_stat_list, responses={200: 'OK'})
+    def list(self, request, *args, **kwargs):
+        # activate('ru')
+        return super(SeasonStatView, self).list(request, *args, **kwargs)
