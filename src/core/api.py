@@ -15,6 +15,9 @@ api.register(r'construction-type', app_views.ConstructionTypeView, basename='con
 api.register(r'season', app_views.SeasonView, basename='season')
 api.register(r'season-price', app_views.SeasonPriceView, basename='season-price')
 api.register(r'basis', app_views.BasisView, basename='basis')
+api.register(r'where-is-built', app_views.WhereIsBuiltView, basename='where-is-built')
+# api.register(r'construction-image', app_views.ConstructionImageView, basename='construction-image')
+api.register(r'season-stat', app_views.SeasonStatView, basename='season-stat')
 
 
 
