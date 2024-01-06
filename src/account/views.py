@@ -3,10 +3,12 @@ from . import models
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import viewsets
 from utils.pagination import TenPagination
+from rest_framework.response import Response
+from rest_framework import status
 
 
 class LoginApiView(TokenObtainPairView):
-    """The class is responsible for LpgIn functionality and Tokenaization"""
+    """The class is responsible for LogIn functionality and Tokenaization"""
     serializer_class = serializers.LogInSerializer
 
 

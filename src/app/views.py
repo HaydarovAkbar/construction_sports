@@ -81,6 +81,7 @@ class SeasonStatView(viewsets.ModelViewSet):
     pagination_class = TenPagination
     filter_backends = [SeasonStatFilterBackend, ]
     filterset_fields = ['season', 'construction_type', ]
+    permission_classes = [permissions.IsAuthenticated, ]
 
     def list(self, request, *args, **kwargs):
         # activate('ru')

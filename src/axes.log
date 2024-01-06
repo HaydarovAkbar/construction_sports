@@ -253,3 +253,41 @@ AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and
 AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
 AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
 AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 12:59:16.794498
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 12:59:39.678757
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 12:59:53.645842
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 13:01:21.505088
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 13:02:51.731018
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 13:03:45.946288
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+Using request.META.get('REMOTE_ADDR', None) fallback method to get client IP address
+Using parameter credentials to get username with key settings.AXES_USERNAME_FORM_FIELD
+AXES: Getting access attempts that are newer than 2024-01-06 13:04:41.643228
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent
+AXES: BEGIN version 6.1.1, blocking by ip_address or combination of username and user_agent

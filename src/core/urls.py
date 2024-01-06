@@ -5,7 +5,7 @@ from django.conf.urls.i18n import i18n_patterns
 from .yasg import schema_view
 from django.conf import settings
 from django.conf.urls.static import static
-
+from .api import account_views
 # bot url
 # from bot.views import MainView as BotMainView
 
@@ -13,6 +13,7 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('admin/', admin.site.urls),
     # path('bot/', BotMainView.as_view()),
+    # path('accounts/login/', account_views.LoginApiView.as_view(), name='login'),
 ]
 
 urlpatterns += i18n_patterns(
