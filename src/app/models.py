@@ -152,7 +152,7 @@ class ConstructionImage(models.Model):
 
 class SeasonStat(models.Model):
     season = models.ForeignKey(Season, on_delete=models.CASCADE)
-    construction_type = models.ForeignKey(ConstructionType, on_delete=models.SET_NULL, null=True)
+    basis = models.ForeignKey(Basis, on_delete=models.SET_NULL, null=True)
     count = models.IntegerField(verbose_name='Количество строительств')
     price = models.DecimalField(max_digits=14, decimal_places=2, verbose_name='Цена сезона (миллион сумов)')
 
