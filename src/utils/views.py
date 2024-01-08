@@ -15,6 +15,7 @@ class StateViewSet(viewsets.ModelViewSet):
     queryset = models.State.objects.all()
     serializer_class = serializers.StateSerializer
     pagination_class = pagination.TenPagination
+    http_method_names = ['get', ]
 
     # permission_classes = [IsAuthenticated, ]
 
@@ -23,6 +24,7 @@ class LanguageViewSet(viewsets.ModelViewSet):
     queryset = models.Language.objects.all()
     serializer_class = serializers.LanguageSerializer
     pagination_class = pagination.TenPagination
+    http_method_names = ['get', ]
 
     # permission_classes = [IsAuthenticated, ]
 
