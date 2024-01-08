@@ -4,11 +4,11 @@ from django_filters.rest_framework import DjangoFilterBackend
 class SeasonStatFilterBackend(DjangoFilterBackend):
     def filter_queryset(self, request, queryset, view):
         season = request.query_params.get('season', None)
-        construction_type = request.query_params.get('construction_type', None)
+        basis = request.query_params.get('basis', None)
         if season:
             queryset = queryset.filter(season=season)
-        if construction_type:
-            queryset = queryset.filter(construction_type=construction_type)
+        if basis:
+            queryset = queryset.filter(basis=basis)
         # user = request.user
         # if user.is_superuser:
         #     return queryset
