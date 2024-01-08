@@ -83,6 +83,6 @@ class SeasonStatView(viewsets.ModelViewSet):
     filterset_fields = ['season', 'construction_type', ]
     permission_classes = [permissions.IsAuthenticated, ]
 
-    def list(self, request, *args, **kwargs):
-        # activate('ru')
-        return super(SeasonStatView, self).list(request, *args, **kwargs)
+    # def list(self, request, *args, **kwargs):
+    #     # activate('ru')
+    #     return super(SeasonStatView, self).list(request, *args, **kwargs)
