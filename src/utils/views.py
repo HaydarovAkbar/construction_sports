@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
-# from django_filters.rest_framework import DjangoFilterBackend
+from django_filters.rest_framework import DjangoFilterBackend
 from django.utils.translation import activate
 from rest_framework.permissions import IsAuthenticated
 
@@ -16,8 +16,6 @@ class StateViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.StateSerializer
     pagination_class = pagination.TenPagination
 
-    # filter_backends = [OrganizationFilterBackend, ]
-    # filterset_fields = ['shortname', 'inn', ]
     # permission_classes = [IsAuthenticated, ]
 
 
@@ -26,8 +24,6 @@ class LanguageViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.LanguageSerializer
     pagination_class = pagination.TenPagination
 
-    # filter_backends = [OrganizationFilterBackend, ]
-    # filterset_fields = ['shortname', 'inn', ]
     # permission_classes = [IsAuthenticated, ]
 
 
@@ -36,9 +32,9 @@ class RegionViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.RegionSerializer
     pagination_class = pagination.TenPagination
 
-    # filter_backends = [OrganizationFilterBackend, ]
-    # filterset_fields = ['shortname', 'inn', ]
-    # permission_classes = [IsAuthenticated, ]
+    filter_backends = [DjangoFilterBackend, ]
+    filterset_fields = ['shortname', 'inn', ]
+    permission_classes = [IsAuthenticated, ]
 
 
 class DistrictViewSet(viewsets.ModelViewSet):
@@ -46,6 +42,6 @@ class DistrictViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.DistrictSerializer
     pagination_class = pagination.TenPagination
 
-    # filter_backends = [OrganizationFilterBackend, ]
-    # filterset_fields = ['shortname', 'inn', ]
-    # permission_classes = [IsAuthenticated, ]
+    filter_backends = [DjangoFilterBackend, ]
+    filterset_fields = ['shortname', 'inn', ]
+    permission_classes = [IsAuthenticated, ]
