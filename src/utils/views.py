@@ -33,7 +33,7 @@ class RegionViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.TenPagination
 
     filter_backends = [DjangoFilterBackend, ]
-    filterset_fields = ['shortname', 'inn', ]
+    filterset_fields = ['title', 'attr', ]
     permission_classes = [IsAuthenticated, ]
 
 
@@ -43,5 +43,5 @@ class DistrictViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.TenPagination
 
     filter_backends = [DjangoFilterBackend, ]
-    filterset_fields = ['shortname', 'inn', ]
+    filterset_fields = ['title', 'attr', ]
     permission_classes = [IsAuthenticated, ]
