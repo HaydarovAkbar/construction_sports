@@ -19,3 +19,33 @@ class StateViewSet(viewsets.ModelViewSet):
     # filter_backends = [OrganizationFilterBackend, ]
     # filterset_fields = ['shortname', 'inn', ]
     # permission_classes = [IsAuthenticated, ]
+
+
+class LanguageViewSet(viewsets.ModelViewSet):
+    queryset = models.Language.objects.all()
+    serializer_class = serializers.LanguageSerializer
+    pagination_class = pagination.TenPagination
+
+    # filter_backends = [OrganizationFilterBackend, ]
+    # filterset_fields = ['shortname', 'inn', ]
+    # permission_classes = [IsAuthenticated, ]
+
+
+class RegionViewSet(viewsets.ModelViewSet):
+    queryset = models.Region.objects.all()
+    serializer_class = serializers.RegionSerializer
+    pagination_class = pagination.TenPagination
+
+    # filter_backends = [OrganizationFilterBackend, ]
+    # filterset_fields = ['shortname', 'inn', ]
+    # permission_classes = [IsAuthenticated, ]
+
+
+class DistrictViewSet(viewsets.ModelViewSet):
+    queryset = models.District.objects.all()
+    serializer_class = serializers.DistrictSerializer
+    pagination_class = pagination.TenPagination
+
+    # filter_backends = [OrganizationFilterBackend, ]
+    # filterset_fields = ['shortname', 'inn', ]
+    # permission_classes = [IsAuthenticated, ]
