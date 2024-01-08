@@ -3,6 +3,7 @@ from django.urls import path, include
 
 from account import views as account_views
 from app import views as app_views
+from utils import views as utils_views
 
 api = routers.DefaultRouter()
 
@@ -20,10 +21,10 @@ api.register(r'where-is-built', app_views.WhereIsBuiltView, basename='where-is-b
 api.register(r'season-stat', app_views.SeasonStatView, basename='season-stat')
 
 # utils urls
-api.register(r'state', app_views.StateViewSet, basename='state')
-api.register(r'language', app_views.LanguageViewSet, basename='language')
-api.register(r'region', app_views.RegionViewSet, basename='region')
-api.register(r'district', app_views.DistrictViewSet, basename='district')
+api.register(r'state', utils_views.StateViewSet, basename='state')
+api.register(r'language', utils_views.LanguageViewSet, basename='language')
+api.register(r'region', utils_views.RegionViewSet, basename='region')
+api.register(r'district', utils_views.DistrictViewSet, basename='district')
 
 urlpatterns = [
     path('', include(api.urls)),
