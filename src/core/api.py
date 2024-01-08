@@ -19,7 +19,11 @@ api.register(r'where-is-built', app_views.WhereIsBuiltView, basename='where-is-b
 # api.register(r'construction-image', app_views.ConstructionImageView, basename='construction-image')
 api.register(r'season-stat', app_views.SeasonStatView, basename='season-stat')
 
-
+# utils urls
+api.register(r'state', app_views.StateViewSet, basename='state')
+api.register(r'language', app_views.LanguageViewSet, basename='language')
+api.register(r'region', app_views.RegionViewSet, basename='region')
+api.register(r'district', app_views.DistrictViewSet, basename='district')
 
 urlpatterns = [
     path('', include(api.urls)),
